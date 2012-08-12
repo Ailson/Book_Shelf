@@ -15,14 +15,14 @@ class BookTest < ActiveSupport::TestCase
  
   test "When a book is borrowed the availability  should be borrowed today" do
     book = Book.new
-    book.borrow 
+    book.borrow(UserSession.current) 
     assert_equal  "borrowed since: " + Date.today.to_s(:long), book.get_availability    
   end
 
   test "When a book is not borrowed the availability should be available" do
     book = Book.new
     book.title = "teste"
-    book.borrow
+    book.borrow(UserSession.current)
     book.save
     book.unborrow
     assert_equal  "available" , book.get_availability
