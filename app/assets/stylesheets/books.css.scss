@@ -1,0 +1,25 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#feed{
+list-style-type: none;
+margin: 60px 0;
+padding: 0;
+}
+ 
+#feed li, #book_show{
+      float: left;
+      margin: 0 45px 45px 0;
+      padding:5px;
+      width: 150px;
+      height: 200px;
+      border: solid 1px #dedbdb;
+      background: #fff;
+}
+
+.book_img
+{
+	width: 150px;
+	height: 200px;
+}
