@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20120812024211) do
     t.datetime "updated_at",                       :null => false
     t.boolean  "borrowed",      :default => false, :null => false
     t.date     "date_borrowed"
-    t.integer  "people_id"
+    t.integer  "person_id"
   end
 
   create_table "people", :force => true do |t|
