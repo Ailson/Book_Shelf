@@ -1,10 +1,10 @@
 class UserSession 
   
   def initialize
-    @current = Person.first(1)
+    @current = Person.first
   end
 
-  def self.current
+  def current_user
     @current
   end
 end

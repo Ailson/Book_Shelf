@@ -14,6 +14,7 @@ class BooksController < ApplicationController
   # GET /books/1.json
   def show
     @book = Book.find(params[:id])
+    debugger
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @book }
@@ -40,7 +41,9 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(params[:book])
-
+    user_session = UserSession.new
+    @book.Person = user_session.current_user
+    debugger
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
