@@ -13,18 +13,32 @@ class BookTest < ActiveSupport::TestCase
     assert !book.save, "Saved a book whithout a picture"
   end
  
-  test "When a book is borrowed the availability  should be borrowed today" do
+  test "When a book is borrowed the availability should be borrowed today" do
     book = Book.new
-    book.borrow(UserSession.current) 
+    user = User.find(2)
+    book.borrow(user) 
     assert_equal  "borrowed since: " + Date.today.to_s(:long), book.get_availability    
   end
 
   test "When a book is not borrowed the availability should be available" do
     book = Book.new
     book.title = "teste"
-    book.borrow(UserSession.current)
+    user = User.find(2)
+    book.borrow(user)
     book.save
     book.unborrow
     assert_equal  "available" , book.get_availability
+  end
+  
+  test "When a book is borrowed this should appear on the borrowed books of the user that is borrowing" do
+   book = Book.new
+   book.title = "teste"
+   book.picture = "teste"
+   book.save
+   user = User.find(2)
+   book.borrow(user)
+   
+   assert user.books_borrowed.count ==  1 
+   assert_equal(book, user.books_borrowed[0])
   end
 end

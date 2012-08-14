@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: Ailson
+  tel: 2191708634
+
+two:
+  id: 2
+  name: Leo
+  tel: 2100000000
