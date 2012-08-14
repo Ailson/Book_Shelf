@@ -42,8 +42,8 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(params[:book])
     user_session = UserSession.new
-    @book.Person = user_session.current_user
-    debugger
+    user_session.current_user.Books << @book
+
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }

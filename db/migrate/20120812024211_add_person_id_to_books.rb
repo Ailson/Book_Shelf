@@ -1,5 +1,8 @@
 class AddPersonIdToBooks < ActiveRecord::Migration
-  def change
+  def up
     add_column :books, :person_id, :integer
+  end
+  def down
+    remove_column :books, :person_id
   end
 end
