@@ -1,7 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+user = User.create([{ name: 'First User' }, { name: 'Second User' }])
+
+Book.create(title: 'Clean Code', picture: 'http://ecx.images-amazon.com/images/I/41znMZniZ1L._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg', description: 'Even bad code can function. More importantly, you will be challenged to reassess your professional values and your commitment to your craft.', user_id: user)
+
+Book.create(title: 'Reinventing Comics', picture: 'http://ecx.images-amazon.com/images/I/51DM1YT8GAL._SL500_AA300_.jpg', description: 'In 1993, Scott McCloud tore down the wall between high and low culture with the acclaimed international hit Understanding Comics, a massive comic book that explored the inner workings of the worlds most misunderstood art form. Now, McCloud takes comics to te next leavle, charting twelve different revolutions in how comics are created, read, and preceived today, and how they are poised to conquer the new millennium.', user_id: user)
+
+Book.create(title: 'Graphic Storytelling and Visual Narrative', picture: 'http://ecx.images-amazon.com/images/I/51wnV8Lzy0L._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg', description: 'In 1993, Scott McCloud tore down the wall between high and low culture with the acclaimed international hit Understanding Comics, a massive comic book that explored the inner workings of the worlds most misunderstood art form. Now, McCloud takes comics to te next leavle, charting twelve different revolutions in how comics are created, read, and preceived today, and how they are poised to conquer the new millennium.', user_id: user)

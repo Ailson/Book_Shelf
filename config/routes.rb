@@ -6,6 +6,8 @@ BookShelf::Application.routes.draw do
   match 'books/unborrow/:id' => "books#unborrow" 
   match 'books/borrow/:id' => "books#borrow"
     
+  root :to => 'books#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +57,6 @@ BookShelf::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
