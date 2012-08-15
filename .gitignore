@@ -14,6 +14,8 @@
 /log/*.log
 /tmp
 
+*/.DS_Store
+
 app/views/books/.DS_Store
 
 db/migrate/.DS_Store
@@ -30,14 +32,6 @@ app/.DS_Store
 
 app/models/.DS_Store
 
-app/models/.DS_Store
-
-app/assets/.DS_Store
-
-app/assets/.DS_Store
-
-app/assets/.DS_Store
-
 app/assets/.DS_Store
 
 app/assets/stylesheets/.DS_Store
@@ -47,10 +41,6 @@ app/controllers/.DS_Store
 app/helpers/.DS_Store
 
 app/views/people/.DS_Store
-
-test/.DS_Store
-
-test/.DS_Store
 
 test/.DS_Store
 
