@@ -3,7 +3,8 @@ class Book < ActiveRecord::Base
   validates :title, :picture,  :presence => true
   attr_accessible :description, :picture, :title
   belongs_to :user
-  belongs_to :borrowed_to, :class_name => "User"
+  belongs_to :borrowed_to,
+             :class_name => "User"
   
   def get_availability   
     if(self.borrowed)
