@@ -49,7 +49,6 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "should lend  a  book to a user" do
-    @book.unborrow
     book_count_before = @user.books_borrowed.count
     put  :borrow, id: @book, user: @user
    
@@ -60,12 +59,12 @@ class BooksControllerTest < ActionController::TestCase
 
   test "should get  a book back from a user" do
     book_count_before = @user.books_borrowed.count
-   # @book.lend_to(@user)
+    @book.lend_to(@user)
     @user.save
 
     put  :unborrow, id: @book, user: @user
    
-    assert_not_equal @book, @user.books_borrowed[0]
+    assert_equal @book, @user.books_borrowed.count, book_count_before
     assert_redirected_to books_path 
   end
 

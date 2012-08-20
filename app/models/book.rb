@@ -20,8 +20,10 @@ class Book < ActiveRecord::Base
     user.books_borrowed << self
   end
 
-  def unborrow
+  def unborrow(user)
     self.borrowed = false
-    self.date_borrowed = nil
+    self.date_borrowed = nil 
+    user.books_borrowed.delete(self)
+  
   end
 end

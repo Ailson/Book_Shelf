@@ -11,12 +11,14 @@
 	        link_to 'Borrow',
 	        :action => :borrow,
 	        :method => :put,
-	        :id => book
+	        :id => book,
+	        :user => User.find(1)
 	     else
 	        link_to 'Unborrow',
 	        :action => :unborrow,
 	        :method => :put,
-	        :id => book
+	        :id => book,
+	        :user => User.find(1)
 	     end
 	 %>
 	 <%= link_to 'Edit', edit_book_path(book) %>

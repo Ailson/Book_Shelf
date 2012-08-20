@@ -26,7 +26,7 @@ class BookTest < ActiveSupport::TestCase
     user = User.find(2)
     book.lend_to(user)
     book.save
-    book.unborrow
+    book.unborrow(user)
     assert_equal  "available" , book.get_availability
   end
   
@@ -41,4 +41,20 @@ class BookTest < ActiveSupport::TestCase
    assert user.books_borrowed.count ==  1 
    assert_equal(book, user.books_borrowed[0])
   end
+  test "When a book is unborrowed this should not appear on the borrowed books" do
+   book = Book.new
+   book.title = "teste"
+   book.picture = "teste"
+   book.save
+   user = User.find(2)
+   book.lend_to(user)
+   previous_book_count = user.books_borrowed.count 
+   book.unborrow(user)
+   book.save
+ 
+   assert user.books_borrowed.count ==  previous_book_count - 1,
+    "borrowed books > previous bookc count"
+   assert_not_equal(book, user.books_borrowed[0])
+  end
+  
 end

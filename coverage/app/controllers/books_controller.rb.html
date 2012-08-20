@@ -2,8 +2,8 @@
   <head>
     <title>app/controllers/books_controller.rb</title>
     
-    <link href="../../report.css?0.7381234903898777" media="screen" rel="stylesheet" type="text/css" />
-    <script src='../../jquery.js?0.8658985507006729'></script>
+    <link href="../../report.css?0.9372301786578583" media="screen" rel="stylesheet" type="text/css" />
+    <script src='../../jquery.js?0.4928410307666896'></script>
     <script>
       $(function() {
 
@@ -90,7 +90,7 @@
               <td class='code_line'>
                 <pre>class BooksController < ApplicationController</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="never" "">
@@ -114,7 +114,7 @@
               <td class='code_line'>
                 <pre>  def index</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -122,7 +122,7 @@
               <td class='code_line'>
                 <pre>    user_session = UserSession.new</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -130,7 +130,7 @@
               <td class='code_line'>
                 <pre>    @books = user_session.current_user.Books</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -146,7 +146,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -154,7 +154,7 @@
               <td class='code_line'>
                 <pre>      format.html # index.html.erb</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -162,7 +162,7 @@
               <td class='code_line'>
                 <pre>      format.json { render json: @books }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -210,7 +210,7 @@
               <td class='code_line'>
                 <pre>  def show</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -218,7 +218,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.find(params[:id])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -226,7 +226,7 @@
               <td class='code_line'>
                 <pre>      respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -234,7 +234,7 @@
               <td class='code_line'>
                 <pre>      format.html # show.html.erb</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -242,7 +242,7 @@
               <td class='code_line'>
                 <pre>      format.json { render json: @book }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -290,7 +290,7 @@
               <td class='code_line'>
                 <pre>  def new</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -298,7 +298,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.new</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -314,7 +314,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -322,7 +322,7 @@
               <td class='code_line'>
                 <pre>      format.html # new.html.erb</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -330,7 +330,7 @@
               <td class='code_line'>
                 <pre>      format.json { render json: @book }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -370,7 +370,7 @@
               <td class='code_line'>
                 <pre>  def edit</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -378,7 +378,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.find(params[:id])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -418,7 +418,7 @@
               <td class='code_line'>
                 <pre>  def create</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -426,7 +426,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.new(params[:book])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -434,7 +434,7 @@
               <td class='code_line'>
                 <pre>    user_session = UserSession.new</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -442,7 +442,7 @@
               <td class='code_line'>
                 <pre>    user_session.current_user.Books << @book</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -458,7 +458,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -466,7 +466,7 @@
               <td class='code_line'>
                 <pre>      if @book.save</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -474,7 +474,7 @@
               <td class='code_line'>
                 <pre>        format.html { redirect_to @book, notice: 'Book was successfully created.' }</pre>
               </td>
-              <td class='hit_number'>14</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -482,7 +482,7 @@
               <td class='code_line'>
                 <pre>        format.json { render json: @book, status: :created, location: @book }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -562,7 +562,7 @@
               <td class='code_line'>
                 <pre>  def update</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -570,7 +570,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.find(params[:id])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -586,7 +586,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -594,7 +594,7 @@
               <td class='code_line'>
                 <pre>      if @book.update_attributes(params[:book])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -602,7 +602,7 @@
               <td class='code_line'>
                 <pre>        format.html { redirect_to @book, notice: 'Book was successfully updated.' }</pre>
               </td>
-              <td class='hit_number'>14</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -610,7 +610,7 @@
               <td class='code_line'>
                 <pre>        format.json { head :no_content }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -690,7 +690,7 @@
               <td class='code_line'>
                 <pre>  def destroy</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -698,7 +698,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.find(params[:id])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -706,7 +706,7 @@
               <td class='code_line'>
                 <pre>    @book.destroy</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -722,7 +722,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -730,7 +730,7 @@
               <td class='code_line'>
                 <pre>      format.html { redirect_to books_url }</pre>
               </td>
-              <td class='hit_number'>14</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -738,7 +738,7 @@
               <td class='code_line'>
                 <pre>      format.json { head :no_content }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -770,7 +770,7 @@
               <td class='code_line'>
                 <pre>  def unborrow</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -778,7 +778,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.find(params[:id])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -786,7 +786,7 @@
               <td class='code_line'>
                 <pre>    @book.unborrow</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -794,7 +794,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -802,7 +802,7 @@
               <td class='code_line'>
                 <pre>      if @book.save</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -810,7 +810,7 @@
               <td class='code_line'>
                 <pre>        format.html { redirect_to books_url, notice: 'Book was unborrowed successfully .' }</pre>
               </td>
-              <td class='hit_number'>14</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -818,7 +818,7 @@
               <td class='code_line'>
                 <pre>        format.json { render json: @book, status: :unborrowed, location: @book }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -882,7 +882,7 @@
               <td class='code_line'>
                 <pre>  def borrow</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -890,7 +890,7 @@
               <td class='code_line'>
                 <pre>    @book = Book.find(params[:id])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -898,7 +898,7 @@
               <td class='code_line'>
                 <pre>    @user = User.find(params[:user])</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -914,7 +914,7 @@
               <td class='code_line'>
                 <pre>    @book.lend_to @user #(user_session.current_user)</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -922,7 +922,7 @@
               <td class='code_line'>
                 <pre>    respond_to do |format|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -930,7 +930,7 @@
               <td class='code_line'>
                 <pre>      if @book.save</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -938,7 +938,7 @@
               <td class='code_line'>
                 <pre>        format.html { redirect_to books_url, notice: 'Book was borrowed successfully .' }</pre>
               </td>
-              <td class='hit_number'>14</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -946,7 +946,7 @@
               <td class='code_line'>
                 <pre>        format.json { render json: @book, status: :borrowed, location: @book }</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>1</td>
             </tr>
           
             <tr class="never" "">
@@ -1010,6 +1010,6 @@
       
     </div>
     
-    <p>Generated on: 2012-08-20 13:19:04 -0300</p>
+    <p>Generated on: 2012-08-20 18:47:30 -0300</p>
   </body>
 </html>

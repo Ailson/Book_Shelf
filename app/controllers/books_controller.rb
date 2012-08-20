@@ -85,7 +85,8 @@ class BooksController < ApplicationController
 
   def unborrow
     @book = Book.find(params[:id])
-    @book.unborrow
+    @user = User.find(params[:user])
+    @book.unborrow(@user)
     respond_to do |format|
       if @book.save
         format.html { redirect_to books_url, notice: 'Book was unborrowed successfully .' }
