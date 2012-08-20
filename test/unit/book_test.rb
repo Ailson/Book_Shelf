@@ -16,7 +16,7 @@ class BookTest < ActiveSupport::TestCase
   test "When a book is borrowed the availability should be borrowed today" do
     book = Book.new
     user = User.find(2)
-    book.borrow(user) 
+    book.lend_to(user) 
     assert_equal  "borrowed since: " + Date.today.to_s(:long), book.get_availability    
   end
 
@@ -24,7 +24,7 @@ class BookTest < ActiveSupport::TestCase
     book = Book.new
     book.title = "teste"
     user = User.find(2)
-    book.borrow(user)
+    book.lend_to(user)
     book.save
     book.unborrow
     assert_equal  "available" , book.get_availability
@@ -36,7 +36,7 @@ class BookTest < ActiveSupport::TestCase
    book.picture = "teste"
    book.save
    user = User.find(2)
-   book.borrow(user)
+   book.lend_to(user)
    
    assert user.books_borrowed.count ==  1 
    assert_equal(book, user.books_borrowed[0])

@@ -10,10 +10,12 @@
 	 <%= if(!book.borrowed)
 	        link_to 'Borrow',
 	        :action => :borrow,
+	        :method => :put,
 	        :id => book
 	     else
 	        link_to 'Unborrow',
 	        :action => :unborrow,
+	        :method => :put,
 	        :id => book
 	     end
 	 %>

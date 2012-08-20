@@ -14,7 +14,7 @@ class Book < ActiveRecord::Base
     end
   end
   
-  def borrow(user)
+  def lend_to(user)
     self.borrowed = true
     self.date_borrowed = Date.today
     user.books_borrowed << self

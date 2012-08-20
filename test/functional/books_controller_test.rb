@@ -3,6 +3,7 @@ require 'test_helper'
 class BooksControllerTest < ActionController::TestCase
   setup do
     @book = books(:one)
+    @user = users(:two)
   end
 
   test "should get index" do
@@ -46,4 +47,28 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_redirected_to books_path
   end
+
+  test "should lend  a  book to a user" do
+    @book.unborrow
+    book_count_before = @user.books_borrowed.count
+    put  :borrow, id: @book, user: @user
+   
+    assert @user.books_borrowed.count ==  book_count_before + 1 
+    assert_equal @book, @user.books_borrowed[0]
+    assert_redirected_to books_path 
+  end
+
+  test "should get  a book back from a user" do
+    book_count_before = @user.books_borrowed.count
+   # @book.lend_to(@user)
+    @user.save
+
+    put  :unborrow, id: @book, user: @user
+   
+    assert_not_equal @book, @user.books_borrowed[0]
+    assert_redirected_to books_path 
+  end
+
+
+
 end

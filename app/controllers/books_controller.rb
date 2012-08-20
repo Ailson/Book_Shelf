@@ -99,8 +99,9 @@ class BooksController < ApplicationController
 
   def borrow
     @book = Book.find(params[:id])
-    user_session = UserSession.new
-    @book.borrow(user_session.current_user)
+    @user = User.find(params[:user])
+    #user_session = UserSession.new
+    @book.lend_to @user #(user_session.current_user)
     respond_to do |format|
       if @book.save
         format.html { redirect_to books_url, notice: 'Book was borrowed successfully .' }
