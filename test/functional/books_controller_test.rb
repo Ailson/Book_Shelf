@@ -64,7 +64,7 @@ class BooksControllerTest < ActionController::TestCase
 
     put  :unborrow, id: @book, user: @user
    
-    assert_equal @book, @user.books_borrowed.count, book_count_before
+    assert_equal @user.books_borrowed.count, book_count_before
     assert_redirected_to books_path 
   end
 
