@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+  <div id="book_show" >
+   <%= image_tag(@book.picture, :class => "book_img")  %>
+  </div>
+<h2>
+  <%= @book.title %>
+</h2>
+
+<p>
+  <%= @book.description %>
+</p>
+
+<p>
+  <%= @book.get_availability %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
