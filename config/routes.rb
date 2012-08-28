@@ -3,11 +3,12 @@ BookShelf::Application.routes.draw do
 
   resources :books
 
-  match 'books/unborrow/:id' => "books#unborrow" 
+  match 'books/unborrow/:id' => "books#unborrow"
   match 'books/borrow/:id' => "books#borrow"
-    
-  root :to => 'books#index'
-  
+  match 'home/callback' => "home#callback"
+
+  root :to => 'home#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

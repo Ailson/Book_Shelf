@@ -13,10 +13,13 @@ group :production do
 end
 
 group :development, :test do
+  gem 'debugger'
+  gem 'cover_me', '>= 1.2.0'
   gem 'sqlite3'
 end
 
 gem 'jquery-rails'
+gem 'koala'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -31,6 +34,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger'
 
-gem 'cover_me', '>= 1.2.0', :group => :test
