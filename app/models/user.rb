@@ -3,8 +3,11 @@ class User < ActiveRecord::Base
   has_many :books
   has_many :friends
 
-  has_many :books_borrowed,
-           :foreign_key => "borrowed_to_user",
-           :class_name => "Book"
+  def books_borrowed
+    self.books.where('friend_id IS NOT NULL')
+  end
 
+  def not_borrowed_books
+    self.books.where('friend_id IS NULL')
+  end
 end
