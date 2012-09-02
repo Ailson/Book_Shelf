@@ -2,8 +2,8 @@
   <head>
     <title>app/models/book.rb</title>
     
-    <link href="../../report.css?0.6584678357564689" media="screen" rel="stylesheet" type="text/css" />
-    <script src='../../jquery.js?0.9776221267505032'></script>
+    <link href="../../report.css?0.5249484507409283" media="screen" rel="stylesheet" type="text/css" />
+    <script src='../../jquery.js?0.2684430785390266'></script>
     <script>
       $(function() {
 
@@ -55,10 +55,10 @@
           app/models/book.rb
           
         </td>
-        <td>27</td>
+        <td>26</td>
         <td>16</td>
-        <td>0</td>
-        <td>100.0%</td>
+        <td>11</td>
+        <td>31.3%</td>
       </tr>
     </table>
 
@@ -90,7 +90,7 @@
               <td class='code_line'>
                 <pre>class Book < ActiveRecord::Base</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="never" "">
@@ -106,7 +106,7 @@
               <td class='code_line'>
                 <pre>  validates :title, :picture,  :presence => true</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -114,7 +114,7 @@
               <td class='code_line'>
                 <pre>  attr_accessible :description, :picture, :title</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -122,75 +122,67 @@
               <td class='code_line'>
                 <pre>  belongs_to :user</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
               <td class='line_number'>6</td>
               <td class='code_line'>
-                <pre>  belongs_to :borrowed_to,</pre>
+                <pre>  belongs_to :lent_to, :friend</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>2</td>
             </tr>
           
             <tr class="never" "">
               <td class='line_number'>7</td>
               <td class='code_line'>
-                <pre>             :class_name => "User"</pre>
+                <pre></pre>
               </td>
               <td class='hit_number'></td>
             </tr>
           
-            <tr class="never" "">
+            <tr class="miss" data-hits='#{cov}'"">
               <td class='line_number'>8</td>
               <td class='code_line'>
-                <pre>  </pre>
+                <pre>  def get_availability</pre>
               </td>
-              <td class='hit_number'></td>
+              <td class='hit_number'>0</td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
+            <tr class="miss" data-hits='#{cov}'"">
               <td class='line_number'>9</td>
-              <td class='code_line'>
-                <pre>  def get_availability   </pre>
-              </td>
-              <td class='hit_number'>8</td>
-            </tr>
-          
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>10</td>
               <td class='code_line'>
                 <pre>    if(self.borrowed)</pre>
               </td>
-              <td class='hit_number'>9</td>
+              <td class='hit_number'>0</td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>11</td>
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>10</td>
               <td class='code_line'>
                 <pre>      "borrowed since: " + self.date_borrowed.to_s(:long)</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>0</td>
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>12</td>
+              <td class='line_number'>11</td>
               <td class='code_line'>
                 <pre>    else</pre>
               </td>
               <td class='hit_number'></td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>13</td>
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>12</td>
               <td class='code_line'>
                 <pre>      "available"</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>0</td>
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>14</td>
+              <td class='line_number'>13</td>
               <td class='code_line'>
                 <pre>    end</pre>
               </td>
@@ -198,95 +190,55 @@
             </tr>
           
             <tr class="never" "">
+              <td class='line_number'>14</td>
+              <td class='code_line'>
+                <pre>  end</pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="never" "">
               <td class='line_number'>15</td>
-              <td class='code_line'>
-                <pre>  end</pre>
-              </td>
-              <td class='hit_number'></td>
-            </tr>
-          
-            <tr class="never" "">
-              <td class='line_number'>16</td>
-              <td class='code_line'>
-                <pre>  </pre>
-              </td>
-              <td class='hit_number'></td>
-            </tr>
-          
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>17</td>
-              <td class='code_line'>
-                <pre>  def lend_to(user)</pre>
-              </td>
-              <td class='hit_number'>8</td>
-            </tr>
-          
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>18</td>
-              <td class='code_line'>
-                <pre>    self.borrowed = true</pre>
-              </td>
-              <td class='hit_number'>14</td>
-            </tr>
-          
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>19</td>
-              <td class='code_line'>
-                <pre>    self.date_borrowed = Date.today</pre>
-              </td>
-              <td class='hit_number'>14</td>
-            </tr>
-          
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>20</td>
-              <td class='code_line'>
-                <pre>    user.books_borrowed << self</pre>
-              </td>
-              <td class='hit_number'>14</td>
-            </tr>
-          
-            <tr class="never" "">
-              <td class='line_number'>21</td>
-              <td class='code_line'>
-                <pre>  end</pre>
-              </td>
-              <td class='hit_number'></td>
-            </tr>
-          
-            <tr class="never" "">
-              <td class='line_number'>22</td>
               <td class='code_line'>
                 <pre></pre>
               </td>
               <td class='hit_number'></td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>23</td>
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>16</td>
               <td class='code_line'>
-                <pre>  def unborrow</pre>
+                <pre>  def lend_to(user)</pre>
               </td>
-              <td class='hit_number'>8</td>
+              <td class='hit_number'>0</td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>24</td>
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>17</td>
               <td class='code_line'>
-                <pre>    self.borrowed = false</pre>
+                <pre>    self.borrowed = true</pre>
               </td>
-              <td class='hit_number'>15</td>
+              <td class='hit_number'>0</td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>25</td>
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>18</td>
               <td class='code_line'>
-                <pre>    self.date_borrowed = nil</pre>
+                <pre>    self.date_borrowed = Date.today</pre>
               </td>
-              <td class='hit_number'>15</td>
+              <td class='hit_number'>0</td>
+            </tr>
+          
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>19</td>
+              <td class='code_line'>
+                <pre>    user.books_borrowed << self</pre>
+              </td>
+              <td class='hit_number'>0</td>
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>26</td>
+              <td class='line_number'>20</td>
               <td class='code_line'>
                 <pre>  end</pre>
               </td>
@@ -294,7 +246,47 @@
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>27</td>
+              <td class='line_number'>21</td>
+              <td class='code_line'>
+                <pre></pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>22</td>
+              <td class='code_line'>
+                <pre>  def unborrow</pre>
+              </td>
+              <td class='hit_number'>0</td>
+            </tr>
+          
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>23</td>
+              <td class='code_line'>
+                <pre>    self.borrowed = false</pre>
+              </td>
+              <td class='hit_number'>0</td>
+            </tr>
+          
+            <tr class="miss" data-hits='#{cov}'"">
+              <td class='line_number'>24</td>
+              <td class='code_line'>
+                <pre>    self.date_borrowed = nil</pre>
+              </td>
+              <td class='hit_number'>0</td>
+            </tr>
+          
+            <tr class="never" "">
+              <td class='line_number'>25</td>
+              <td class='code_line'>
+                <pre>  end</pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="never" "">
+              <td class='line_number'>26</td>
               <td class='code_line'>
                 <pre>end</pre>
               </td>
@@ -306,6 +298,6 @@
       
     </div>
     
-    <p>Generated on: 2012-08-20 13:19:04 -0300</p>
+    <p>Generated on: 2012-09-01 18:03:32 -0300</p>
   </body>
 </html>

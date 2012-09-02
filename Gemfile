@@ -14,5 +14,10 @@ end
 group :development, :test do
   gem 'debugger'
   gem 'cover_me', '>= 1.2.0'
+  gem 'database_cleaner'
+  gem "factory_girl_rails", "~> 4.0"
+  gem "capybara"
+  gem "guard-rspec"
+  gem 'rspec-rails'
 end
 
