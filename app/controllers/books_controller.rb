@@ -86,7 +86,7 @@ class BooksController < ApplicationController
   def unborrow
     @book = Book.find(params[:id])
     @user = User.find(params[:user])
-    @book.unborrow(@user)
+    @book.unborrow @user 
     respond_to do |format|
       if @book.save
         format.html { redirect_to books_url, notice: 'Book was unborrowed successfully .' }
@@ -101,8 +101,7 @@ class BooksController < ApplicationController
   def borrow
     @book = Book.find(params[:id])
     @user = User.find(params[:user])
-    #user_session = UserSession.new
-    @book.lend_to @user #(user_session.current_user)
+    @book.lend_to @user
     respond_to do |format|
       if @book.save
         format.html { redirect_to books_url, notice: 'Book was borrowed successfully .' }

@@ -47,3 +47,5 @@ test/.DS_Store
 test/fixtures/.DS_Store
 
 test/unit/.DS_Store
+
+*.rb#

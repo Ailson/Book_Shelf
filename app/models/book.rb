@@ -22,8 +22,8 @@ class Book < ActiveRecord::Base
 
   def unborrow(user)
     self.borrowed = false
-    self.date_borrowed = nil 
+    self.date_borrowed = nil
+    
     user.books_borrowed.delete(self)
-  
   end
 end
