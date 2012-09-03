@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+<<<<<<< HEAD
   # GET /books
   # GET /books.json
   def index
@@ -7,10 +8,44 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+=======
+
+  def index
+    user_session = UserSession.new
+    @books = user_session.current_user.books
+
+    respond_to do |format|
+      format.html # index.html.erb
       format.json { render json: @books }
     end
   end
 
+  def borrowed
+    user_session = UserSession.new
+    @books = user_session.current_user.books_borrowed
+
+    respond_to do |format|
+      format.html { render :template => "books/index" }
+      format.json { render json: @books }
+    end
+  end
+
+  def not_borrowed
+    user_session = UserSession.new
+    @books = user_session.current_user.not_borrowed_books
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.html { render :template => "books/index" }
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
+      format.json { render json: @books }
+    end
+  end
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
   # GET /books/1
   # GET /books/1.json
   def show
@@ -42,7 +77,11 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(params[:book])
     user_session = UserSession.new
+<<<<<<< HEAD
     user_session.current_user.Books << @book
+=======
+    user_session.current_user.books << @book
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
 
     respond_to do |format|
       if @book.save
@@ -85,8 +124,12 @@ class BooksController < ApplicationController
 
   def unborrow
     @book = Book.find(params[:id])
+<<<<<<< HEAD
     @user = User.find(params[:user])
     @book.unborrow @user 
+=======
+    @book.unborrow
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
     respond_to do |format|
       if @book.save
         format.html { redirect_to books_url, notice: 'Book was unborrowed successfully .' }
@@ -100,8 +143,15 @@ class BooksController < ApplicationController
 
   def borrow
     @book = Book.find(params[:id])
+<<<<<<< HEAD
     @user = User.find(params[:user])
     @book.lend_to @user
+=======
+    user_session = UserSession.new
+    friend = user_session.current_user.friends.first
+    @book.lend_to friend
+
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
     respond_to do |format|
       if @book.save
         format.html { redirect_to books_url, notice: 'Book was borrowed successfully .' }
@@ -112,4 +162,8 @@ class BooksController < ApplicationController
       end
     end
   end
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
 end

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SQLite version 3.x
 #   gem install sqlite3
 #
@@ -8,10 +9,22 @@ development:
   database: db/development.sqlite3
   pool: 5
   timeout: 5000
+=======
+development:
+  adapter: postgresql
+  database: bookshelf_development
+  username: postgres
+  password: password
+  host: localhost
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+<<<<<<< HEAD
 test:
   adapter: sqlite3
   database: db/test.sqlite3
@@ -23,3 +36,25 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+=======
+test: &test
+  adapter: postgresql
+  database: bookshelf_test
+  username: postgres
+  password: password
+  pool: 5
+  host: localhost
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: bookshelf_production
+  username: postgres
+  password: password
+  pool: 5
+  host: localhost
+  timeout: 5000
+
+cucumber:
+  <<: *test
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0

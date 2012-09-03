@@ -1,1 +1,20 @@
-<!DOCTYPE html><html><head>  <title>BookShelf</title>  <%= stylesheet_link_tag    "application", :media => "all" %>  <%= javascript_include_tag "application" %>  <%= csrf_meta_tags %></head><body><%= link_to 'My Books', books_path %> |<%= link_to 'Borrowed Books', books_path %> |<%= link_to 'My friends', books_path %><%= yield %></body></html>
+<<<<<<< HEAD
+<!DOCTYPE html><html><head>  <title>BookShelf</title>  <%= stylesheet_link_tag    "application", :media => "all" %>  <%= javascript_include_tag "application" %>  <%= csrf_meta_tags %></head><body><%= link_to 'My Books', books_path %> |<%= link_to 'Borrowed Books', books_path %> |<%= link_to 'My friends', books_path %><%= yield %></body></html>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookShelf</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+<body>
+  <%= link_to 'All Books', books_path %> |
+  <%= link_to 'Borrowed Books', books_borrowed_path %> |
+  <%= link_to 'Not Borrowed Books', not_borrowed_books_path %> |
+  <%= link_to 'New Book', new_book_path %>
+  <%= yield %>
+</body>
+</html>
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0

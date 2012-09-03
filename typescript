@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Script started on Sun Sep  2 00:00:00 2012
 [?1034hbash-3.2$ quit
 bash: quit: command not found
@@ -7,3 +8,28 @@ bash-3.2$ ext[Kit
 exit
 
 Script done on Sun Sep  2 00:00:09 2012
+=======
+Script started on Thu Aug  9 22:34:14 2012
+[?1034hbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ sssaas
+bash: sssaas: command not found
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ quit
+bash: quit: command not found
+bash-3.2$ ei[Kxit
+exit
+
+Script done on Thu Aug  9 22:34:27 2012
+>>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
