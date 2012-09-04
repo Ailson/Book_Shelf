@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120814180031) do
-=======
 ActiveRecord::Schema.define(:version => 20120902002957) do
->>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -27,8 +23,6 @@ ActiveRecord::Schema.define(:version => 20120902002957) do
     t.date     "date_borrowed"
     t.integer  "user_id"
     t.integer  "borrowed_to_user"
-<<<<<<< HEAD
-=======
     t.integer  "friend_id"
   end
 
@@ -39,7 +33,6 @@ ActiveRecord::Schema.define(:version => 20120902002957) do
     t.integer  "facebook_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
->>>>>>> ed50c4c524b2a5a0a3b9250bc12c3db73e5a34b0
   end
 
   create_table "users", :force => true do |t|
