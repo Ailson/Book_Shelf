@@ -34,21 +34,16 @@
 <% @books.each do |book| %>
 
     <li>
-         <%= link_to(image_tag(book.picture, :class => "book_img"),  book) %>
-         <p><%= book.get_availability  %></p>
-	 <%= if(!book.is_borrowed)
-	        link_to 'Borrow',
-              :action => :borrow,
-              :method => :put,
-  	          :id => book
-	     else
-	        link_to 'Unborrow',
-	        :action => :unborrow,
-	        :id => book
-	     end
-	 %>
-	 <%= link_to 'Edit', edit_book_path(book) %>
-         <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to(image_tag(book.picture, :class => "book_img"),  book) %>
+        <p><%= book.get_availability  %></p>
+        <%= if book.is_borrowed
+              link_to 'Unborrow', :action => :unborrow, :id => book
+            else
+              link_to 'Borrow', :action => :borrow, :id => book
+            end
+        %>
+      	<%= link_to 'Edit', edit_book_path(book) %>
+        <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
 
 <% end %>
